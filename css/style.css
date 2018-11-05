@@ -1,0 +1,10 @@
+.container {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.col-md-6 {
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -9,6 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
    
+    <!-- Moje własne style CSS -->
+    <link rel="Stylesheet" type="text/css" href="css/style.css" />
+    
 	<title>Cipher</title>
 
 </head>
@@ -18,19 +21,34 @@
     <!-- Główne okno programu -->
     
     <div class="container">
-        <form method="post" action="code.php">
-            <textarea type="text" name="code"></textarea><br />
-            <input type="submit" value="Koduj" name="Koduj"/>
-        </form>
-            <br />
-	   <form method="post" action="decode.php">
-            <textarea type="text" name="recode"></textarea><br />
-            <input type="submit" value="Rozkoduj" name="Dekoduj"/>
-        </form>
+         <div class="row">
+            <div class="col-md-6">
+                
+                <!-- Sekcja kodująca tekst -->
+                <h3>Zakoduj swój tekst</h3>
+                
+                <form method="post" action="code.php">
+                    <textarea type="text" name="code" class="form-control" rows="5"></textarea><br />
+                    <input type="submit" value="Koduj" name="Koduj" class="btn btn-primary"/>
+                </form>
+                    <br />
+                
+                <!-- Sekcja rozszyfrowująca tekst -->
+                <h3>Rozszyfruj swój tekst</h3>
+                
+                <form method="post" action="decode.php">
+                    <textarea type="text" name="recode" class="form-control" rows="5"></textarea><br />
+                    <input type="submit" value="Rozkoduj" name="Dekoduj" class="btn btn-primary"/>
+                </form>
+        
+                    <br/>
+                <!-- Stopka programu -->
+                <footer>Stworzone przez Synek</footer>
+             </div>
+        </div>
     </div>
     
-    <!-- Stopka programu -->
-    <footer>Stworzone przez MN</footer>
+    
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
