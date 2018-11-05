@@ -23,13 +23,14 @@
     <div class="container">
          <div class="row">
             <div class="col-md-6">
-
+                <h3>Oto zaszyfrowany tekst</h3>
+                <br/>
                 <?php
 
                     //Pobranie tekstu z formularza
                     $post = $_POST['code'];
 
-                    //Wczytanie zawartości pliku
+                    //Wczytanie zawartości klucza
                     include 'key.php';
 
                     //Zmiana tekstu na ciąg znaków
@@ -39,6 +40,8 @@
                     echo $p;
 
                 ?>
+                <br/><br/>
+                <a class="btn btn-primary" href="index.php" role="button">Wstecz</a>
                 
             </div>
         </div>
