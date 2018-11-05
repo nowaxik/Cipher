@@ -15,16 +15,21 @@
 
 <body>
     
-    <form method="post" action="code.php">
-        <textarea type="text" name="code"></textarea><br />
-        <input type="submit" value="Koduj" name="Koduj"/>
-    </form>
-        <br />
-	<form method="post" action="decode.php">
-        <textarea type="text" name="recode"></textarea><br />
-        <input type="submit" value="Rozkoduj" name="Dekoduj"/>
-    </form>
+    <!-- Główne okno programu -->
     
+    <div class="container">
+        <form method="post" action="code.php">
+            <textarea type="text" name="code"></textarea><br />
+            <input type="submit" value="Koduj" name="Koduj"/>
+        </form>
+            <br />
+	   <form method="post" action="decode.php">
+            <textarea type="text" name="recode"></textarea><br />
+            <input type="submit" value="Rozkoduj" name="Dekoduj"/>
+        </form>
+    </div>
+    
+    <!-- Stopka programu -->
     <footer>Stworzone przez MN</footer>
     
     <!-- Optional JavaScript -->
