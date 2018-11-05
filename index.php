@@ -22,6 +22,6 @@
         <input type="submit" value="Rozkoduj" name="Dekoduj"/>
     </form>
     
-    <footer>Stopka programu - Kodujemy tekst</footer>
+    <footer>Stworzone przez MN</footer>
 </body>
 </html>
