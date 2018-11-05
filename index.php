@@ -25,25 +25,24 @@
             <div class="col-md-6">
                 
                 <!-- Sekcja kodująca tekst -->
-                <h3>Zakoduj swój tekst</h3>
+                <h3 class="font-weight-light">Zakoduj swój tekst</h3>
                 
                 <form method="post" action="code.php">
-                    <textarea type="text" name="code" class="form-control" rows="5"></textarea><br />
+                    <textarea placeholder="Wpisz swój tekst do zaszyfrowania" type="text" name="code" class="form-control" rows="5"></textarea><br />
                     <input type="submit" value="Koduj" name="Koduj" class="btn btn-primary"/>
                 </form>
-                    <br />
-                
+                    <hr class="line" />
                 <!-- Sekcja rozszyfrowująca tekst -->
-                <h3>Rozszyfruj swój tekst</h3>
+                <h3 class="font-weight-light">Rozszyfruj swój tekst</h3>
                 
                 <form method="post" action="decode.php">
-                    <textarea type="text" name="recode" class="form-control" rows="5"></textarea><br />
+                    <textarea placeholder="Wpisz swój tekst do rozszyfrowania" type="text" name="recode" class="form-control" rows="5"></textarea><br />
                     <input type="submit" value="Rozkoduj" name="Dekoduj" class="btn btn-primary"/>
                 </form>
         
-                    <br/>
+                    <hr class="line-small" />
                 <!-- Stopka programu -->
-                <footer><h5>Stworzone przez Synek</h5></footer>
+                <footer><h6 class="font-weight-light">Stworzone przez Synek</h6></footer>
              </div>
         </div>
     </div>
