@@ -43,7 +43,7 @@
         
                     <br/>
                 <!-- Stopka programu -->
-                <footer>Stworzone przez Synek</footer>
+                <footer><h5>Stworzone przez Synek</h5></footer>
              </div>
         </div>
     </div>
