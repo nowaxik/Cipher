@@ -22,7 +22,10 @@
     
     <div class="container">
          <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
+                
+                <h1 class="font-weight-light">Cipher</h1>
+                <hr class="line-long"/>
                 
                 <!-- Sekcja kodująca tekst -->
                 <h3 class="font-weight-light">Zakoduj swój tekst</h3>
@@ -42,7 +45,7 @@
         
                     <hr class="line-small" />
                 <!-- Stopka programu -->
-                <footer><h6 class="font-weight-light">Stworzone przez Synek</h6></footer>
+                <footer><h8 class="font-weight-light">Stworzone przez Synek</h8></footer>
              </div>
         </div>
     </div>

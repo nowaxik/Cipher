@@ -4,7 +4,7 @@
     margin-right: auto;
     text-align: center;
 }
-.col-md-6 {
+.col-md-8 {
     margin-left: auto;
     margin-right: auto;
 }
@@ -15,7 +15,12 @@
 }
 
 .line-small {
-    margin-top: 25px;
+    margin-top: 35px;
     margin-bottom: 15px;
     width: 120px;
+}
+
+.line-long {
+    margin-bottom: 55px;
+    width: auto;
 }
