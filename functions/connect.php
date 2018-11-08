@@ -1,15 +1,20 @@
 <?php
     
-    //Połącznie z bazą danych
+    //Połącznie z z serwerem
     $servername = "localhost";
     $username = "root";
     $password = "";
 
-    $conn = new mysqli($servername, $username, $password);
+    try {
+    $conn = new PDO("mysql:host=$servername;dbname=cipher", $username, $password);
     
-    //Spradzenie połączenia
-    if ($conn->connect_error) {
-        die("Błąd połącznenia: " . $conn->connect_error);
-    } 
-        echo "Połączono z bazą danych";
+    // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully"; 
+                }
+                    catch(PDOException $e)
+                {
+                    echo "Connection failed: " . $e->getMessage();
+                } 
+    
 ?>
