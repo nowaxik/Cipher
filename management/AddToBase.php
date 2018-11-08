@@ -23,35 +23,30 @@
     <div class="container">
          <div class="row">
             <div class="col-md-8">
-                <h1 class="font-weight-light">Management</h1>
-                <hr class="line-long"/>
-                
-                <ul class="nav nav-pills">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="ChangesKey.php">Changes in the key</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Show queries</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                  </li>
-                </ul>
-                
-                <hr class="line-long"/>
-                
-                <form action="AddToBase.php" method="post"> 
-                    Litera<br/>
-                    <input type="text" name="letter" /><br/>
-                    Kod<br/>
-                    <input type="text" name="code" /><br/><br/>
-                    <input type="submit" value="Dodaj" class="btn btn-primary"/> 
-                </form>
-                
-            </div>
+
+<?php 
+
+include 'connect.php';
+
+// odbieramy dane z formularza 
+$letter = $_POST['letter']; 
+$code = $_POST['code']; 
+
+if($letter and $code) { 
+     
+    // dodajemy rekord do bazy 
+    //$ins = @mysql_query("INSERT INTO codekey SET imie='$letter', email='$code'"); 
+    $sql = "INSERT INTO codekey (id, letter, codekey)
+    VALUES ('', letter='$letter', codekey='$code')";
+    // use exec() because no results are returned
+    $conn->exec($sql);
+    echo "New record created successfully"; 
+    
+} 
+?>
+<a class="nav-link active" href="index.php">Home</a>
+    
+    </div>
         </div>
     </div>
     
