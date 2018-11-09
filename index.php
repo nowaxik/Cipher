@@ -28,7 +28,7 @@
                 <hr class="line-long"/>
                 
                 <!-- Sekcja kodująca tekst -->
-                <h3 class="font-weight-light">Zakoduj swój tekst</h3>
+                <h3 class="font-weight-light">Zaszyfrujs swój tekst</h3>
                 
                 <form method="post" action="code.php">
                     <textarea placeholder="Wpisz swój tekst do zaszyfrowania" type="text" name="code" class="form-control" rows="5"></textarea><br />
