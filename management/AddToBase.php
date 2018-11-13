@@ -26,27 +26,43 @@
 
 <?php 
 
-include 'connect.php';
+        // Odbieramy dane z formularza 
+        $letter = $_POST['letter']; 
+        $code = $_POST['code']; 
 
-// odbieramy dane z formularza 
-$letter = $_POST['letter']; 
-$code = $_POST['code']; 
+                
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "cipher";
 
-if($letter and $code) { 
-     
-    // dodajemy rekord do bazy 
-    //$ins = @mysql_query("INSERT INTO codekey SET imie='$letter', email='$code'"); 
-    $sql = "INSERT INTO codekey (id, letter, codekey)
-    VALUES ('', letter='$letter', codekey='$code')";
-    // use exec() because no results are returned
-    $conn->exec($sql);
-    echo "New record created successfully"; 
-    
-} 
+                // Połączenie z bazą danych
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                
+                // Sprawdzenie połączenia
+                if ($conn->connect_error) 
+                {
+                    die("Connection failed: " . $conn->connect_error);
+                } 
+        
+        //Dodanie rekordu do bazy danyc
+        $sql = "INSERT INTO cip_key (letter, cipkey)
+        VALUES ('$letter', '$code')";
+        
+        //Sprawdzenie czy rekord został prawidłowo dodany do bazy danych
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }  
+                
+        //Zamknięcie połączenia z bazą danych
+        $conn->close();   
+
 ?>
-<a class="nav-link active" href="index.php">Home</a>
+                <a class="nav-link active" href="index.php">Home</a>
     
-    </div>
+            </div>
         </div>
     </div>
     

@@ -31,10 +31,10 @@
                     $post = $_POST['code'];
 
                     //Wczytanie zawartości klucza
-                    include 'key.php';
+                    include 'key1.php';
 
                     //Zmiana tekstu na ciąg znaków
-                    $p = strtr($post, $arry + $arrypluss + $arryplus);
+                    $p = strtr($post, $arry);
 
                     //Wyświetlenie
                     echo $p;
